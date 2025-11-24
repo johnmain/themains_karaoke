@@ -1,29 +1,47 @@
+<!-- Fuse.js search script -->
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+
 <script>
-async function loadSongs() {
-  const res = await fetch('/karaoke_clean.json');
-  const songs = await res.json();
+document.addEventListener("DOMContentLoaded", async () => {
+  const response = await fetch("/karaoke_clean.json");
+  const songs = await response.json();
 
   const fuse = new Fuse(songs, {
-    keys: ['Artist', 'Title'],
-    threshold: 0.3
+    keys: ["Artist", "Title"],
+    threshold: 0.3,
   });
 
-  const input = document.getElementById('search');
-  const resultsEl = document.getElementById('results');
+  const input = document.getElementById("search");
+  const resultsWrapper = document.getElementById("results");
 
-  input.addEventListener('input', () => {
-    const query = input.value.trim();
-    if (!query) {
-      resultsEl.innerHTML = '';
+  input.addEventListener("input", () => {
+    const q = input.value.trim();
+
+    if (!q) {
+      resultsWrapper.innerHTML = "";
       return;
     }
-    const results = fuse.search(query);
-    resultsEl.innerHTML = results
-      .map(r => `<li class="py-1 border-b border-gray-200 dark:border-neutral-600">${r.item.Artist} - ${r.item.Title}</li>`)
-      .join('');
-  });
-}
 
-loadSongs();
+    const results = fuse.search(q);
+
+    // Full scrollable card
+    resultsWrapper.innerHTML = `
+      <div class="border rounded-lg p-4 shadow-lg
+                  max-h-[60vh] overflow-y-auto
+                  dark:border-neutral-600
+                  dark:bg-neutral-700 dark:text-neutral-100">
+        ${results
+          .map(
+            (r) => `
+          <div class="py-2 border-b border-neutral-600 last:border-b-0">
+            <p class="font-semibold">${r.item.Artist}</p>
+            <p>${r.item.Title}</p>
+          </div>
+        `
+          )
+          .join("")}
+      </div>
+    `;
+  });
+});
 </script>
