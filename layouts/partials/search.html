@@ -1,12 +1,13 @@
-<div id="karaoke-search" class="my-6 max-w-3xl">
-  <input
-    id="search"
-    type="text"
-    placeholder="Search Artist or Title"
-    class="w-full rounded border border-gray-300 p-3 text-lg
-           dark:bg-neutral-700 dark:text-neutral-100"
-  >
+{{ define "main" }}
 
-  <!-- Key: This now forces height limits -->
-  <div id="results" class="mt-4 max-h-[60vh]"></div>
+<div class="search-container">
+
+  <!-- Page Title -->
+  <h1 class="search-title">Karaoke Search</h1>
+
+  <!-- Search Input + Results -->
+  {{ partial "_partials/search-scripts.html" . }}
+
 </div>
+
+{{ end }}

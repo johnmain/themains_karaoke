@@ -1,47 +1,72 @@
-<!-- Fuse.js search script -->
+<!-- Search Input -->
+<input
+  id="search"
+  type="text"
+  placeholder="Search by artist or title..."
+  style="
+    width: 100%;
+    padding: 12px;
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 6px;
+    margin-bottom: 15px;
+  "
+>
+
+<!-- Results Container (scrollable card) -->
+<div
+  id="results"
+  style="
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    color: #fff;
+  "
+></div>
+
+<!-- Fuse.js -->
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("/karaoke_clean.json");
-  const songs = await response.json();
+async function loadSongs() {
+  const res = await fetch('/karaoke_clean.json');
+  const songs = await res.json();
 
   const fuse = new Fuse(songs, {
-    keys: ["Artist", "Title"],
-    threshold: 0.3,
+    keys: ['Artist', 'Title'],
+    threshold: 0.3
   });
 
-  const input = document.getElementById("search");
-  const resultsWrapper = document.getElementById("results");
+  const input = document.getElementById('search');
+  const resultsEl = document.getElementById('results');
 
-  input.addEventListener("input", () => {
-    const q = input.value.trim();
+  input.addEventListener('input', () => {
+    const query = input.value.trim();
 
-    if (!q) {
-      resultsWrapper.innerHTML = "";
+    if (!query) {
+      resultsEl.innerHTML = '';
       return;
     }
 
-    const results = fuse.search(q);
+    const results = fuse.search(query);
 
-    // Full scrollable card
-    resultsWrapper.innerHTML = `
-      <div class="border rounded-lg p-4 shadow-lg
-                  max-h-[60vh] overflow-y-auto
-                  dark:border-neutral-600
-                  dark:bg-neutral-700 dark:text-neutral-100">
-        ${results
-          .map(
-            (r) => `
-          <div class="py-2 border-b border-neutral-600 last:border-b-0">
-            <p class="font-semibold">${r.item.Artist}</p>
-            <p>${r.item.Title}</p>
+    resultsEl.innerHTML = results
+      .map(r => {
+        const s = r.item;
+        return `
+          <div style="padding: 6px 0; border-bottom: 1px solid #333;">
+            <strong>${s.Artist}</strong><br>
+            <span>${s.Title}</span>
           </div>
-        `
-          )
-          .join("")}
-      </div>
-    `;
+        `;
+      })
+      .join('');
   });
-});
+}
+
+document.addEventListener('DOMContentLoaded', loadSongs);
 </script>

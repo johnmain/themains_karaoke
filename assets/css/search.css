@@ -1,0 +1,81 @@
+/* ----- Dark Search Input ----- */
+.dark-search {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    margin-bottom: 1rem;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.dark-search::placeholder {
+    color: #aaa;
+}
+
+.dark-search:focus {
+    outline: none;
+    border-color: #888;
+    background-color: #1a1a1a;
+}
+
+/* ----- Results Card ----- */
+.results-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 0.75rem;
+
+    max-height: 400px;
+    overflow-y: auto;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ----- Scrollbar Styling ----- */
+.results-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.results-card::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.results-card::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+/* ----- Song Row ----- */
+.song-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.25rem;
+    border-bottom: 1px solid #333;
+    color: #eee;
+}
+
+.song-row:last-child {
+    border-bottom: none;
+}
+
+.artist {
+    font-weight: bold;
+}
+
+.title {
+    opacity: 0.8;
+}
+.search-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.search-title {
+    color: #fff;
+    margin-bottom: 1rem;
+}
