@@ -13,7 +13,7 @@
   data-default-appearance="dark"
   data-auto-appearance="false"
 ><head>
-	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=39489&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
@@ -27,7 +27,7 @@
   
   <script
     type="text/javascript"
-    src="http://localhost:39489/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
     integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
   ></script>
   
@@ -41,7 +41,7 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="http://localhost:39489/css/main.bundle.min.883ea88303660fc84ec4d6e31a1439ef115f9e0c8937aad78f6fd4a96227bec0.css"
+    href="http://localhost:1313/css/main.bundle.min.883ea88303660fc84ec4d6e31a1439ef115f9e0c8937aad78f6fd4a96227bec0.css"
     integrity="sha256-iD6ogwNmD8hOxNbjGhQ57xFfngyJN6rXj2/UqWInvsA="
   />
   
@@ -63,10 +63,10 @@
   
   
   
-    <link rel="canonical" href="http://localhost:39489/id/" />
+    <link rel="canonical" href="http://localhost:1313/id/" />
   
-  <link rel="alternate" type="application/rss+xml" href="http://localhost:39489/id/index.xml" title="Karaoke Songs" />
-  <link rel="alternate" type="application/json" href="http://localhost:39489/id/index.json" title="Karaoke Songs" />
+  <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/id/index.xml" title="Karaoke Songs" />
+  <link rel="alternate" type="application/json" href="http://localhost:1313/id/index.json" title="Karaoke Songs" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -81,7 +81,7 @@
   
   
   
-  <meta property="og:url" content="http://localhost:39489/id/">
+  <meta property="og:url" content="http://localhost:1313/id/">
   <meta property="og:site_name" content="Karaoke Songs">
   <meta property="og:title" content="Karaoke Songs">
   <meta property="og:locale" content="id">
@@ -96,11 +96,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "http:\/\/localhost:39489\/id\/",
+    "@id": "http:\/\/localhost:1313\/id\/",
     "name": "Karaoke Songs",
     
     "inLanguage": "id",
-    "url": "http:\/\/localhost:39489\/id\/",
+    "url": "http:\/\/localhost:1313\/id\/",
     
     "publisher" : {
       "@type": "Person",
@@ -171,6 +171,9 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+
+
 <div style="display: flex; gap: 10px; margin-bottom: 15px;">
   <input
     id="search"
@@ -215,14 +218,12 @@
   "
 ></div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
-
 <script>
 async function loadSongs() {
   const res = await fetch('/karaoke_clean.json');
   const songs = await res.json();
 
+  
   const fuse = new Fuse(songs, {
     keys: ['Artist', 'Title'],
     threshold: 0.3
@@ -232,8 +233,7 @@ async function loadSongs() {
   const button = document.getElementById('searchButton');
   const resultsEl = document.getElementById('results');
 
-  
-  button.addEventListener('click', () => {
+  function runSearch() {
     const query = input.value.trim();
 
     if (!query) {
@@ -254,6 +254,17 @@ async function loadSongs() {
         `;
       })
       .join('');
+  }
+
+  
+  button.addEventListener('click', runSearch);
+
+  
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      runSearch();
+    }
   });
 }
 
@@ -339,7 +350,7 @@ document.addEventListener('DOMContentLoaded', loadSongs);
                 <div class="flex flex-grow">
                   
                     <a
-                      href="http://localhost:39489/"
+                      href="http://localhost:1313/"
                       class="w-full py-1 pe-10 ps-2 decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
                       >English</a
                     >
@@ -355,7 +366,7 @@ document.addEventListener('DOMContentLoaded', loadSongs);
                 <div class="flex flex-grow">
                   
                     <a
-                      href="http://localhost:39489/id/"
+                      href="http://localhost:1313/id/"
                       class="flex w-full items-center justify-between bg-primary-100 px-2 py-1 dark:bg-primary-900"
                       ><span
                         class="ms-2 w-6 text-primary-600 dark:text-primary-400"

@@ -1,3 +1,6 @@
+<!-- Load Fuse.js BEFORE any script that uses it -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+
 <!-- Search Box + Button Container -->
 <div style="display: flex; gap: 10px; margin-bottom: 15px;">
   <input
@@ -43,14 +46,12 @@
   "
 ></div>
 
-<!-- Fuse.js -->
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
-
 <script>
 async function loadSongs() {
   const res = await fetch('/karaoke_clean.json');
   const songs = await res.json();
 
+  // Fuse is now definitely defined here
   const fuse = new Fuse(songs, {
     keys: ['Artist', 'Title'],
     threshold: 0.3
@@ -60,8 +61,7 @@ async function loadSongs() {
   const button = document.getElementById('searchButton');
   const resultsEl = document.getElementById('results');
 
-  // Trigger search ONLY when button pressed
-  button.addEventListener('click', () => {
+  function runSearch() {
     const query = input.value.trim();
 
     if (!query) {
@@ -82,6 +82,17 @@ async function loadSongs() {
         `;
       })
       .join('');
+  }
+
+  // Click → search
+  button.addEventListener('click', runSearch);
+
+  // Enter key → search
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      runSearch();
+    }
   });
 }
 
