@@ -1,0 +1,9 @@
+
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+pagination.pagerSize = 5
+summaryLength = 0
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
