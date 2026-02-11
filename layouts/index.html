@@ -1,10 +1,44 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<p>Welcome to the Karaoke Library!</p>
-<img src = "/homer.png"/>
-<p>Use the search below.</p>
+<div class="container mx-auto px-4 py-12">
+    
+    <!-- Hero Section -->
+    <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+        <div class="md:w-1/2 text-left">
+            <h1 class="text-6xl font-extrabold mb-6 tracking-tight">
+                {{ .Title }}
+            </h1>
+            <p class="text-2xl text-neutral-600 dark:text-neutral-300">
+                Welcome to the Karaoke Library! 🎤<br>
+                Browse our collection, find your anthem, and get ready to shine.
+            </p>
+        </div>
+        <div class="md:w-1/2 flex justify-end">
+             <img src="/homer.png" alt="Karaoke Mascot" class="w-1/2 rounded-xl shadow-lg rotate-2 hover:rotate-0 transition-transform duration-300" />
+        </div>
+    </div>
 
-{{ partial "search.html" . }}
-{{ partial "search-scripts.html" . }}
+    <!-- Search Section -->
+    <div class="max-w-3xl mx-auto my-20 py-8">
+        {{ partial "search-scripts.html" . }}
+    </div>
 
+    <!-- Hosting/Info Section -->
+    <div class="max-w-4xl mx-auto">
+        <div class="prose dark:prose-invert max-w-none text-lg">
+            <h2>Hosting a Karaoke Night?</h2>
+            <p>
+                Ready to bring the house down? Here are some quick tips to ensure your karaoke event is a legendary success:
+            </p>
+            <ul>
+                <li><strong>Set the Stage:</strong> Make sure the lyrics are visible to everyone, not just the singer.</li>
+                <li><strong>Mix it Up:</strong> Alternate between upbeat bangers and power ballads to keep the energy dynamic.</li>
+                <li><strong>The Golden Rule:</strong> Cheering is mandatory! Support every performer, regardless of pitch or key.</li>
+            </ul>
+            <p>
+                <em>Grab a mic and let's go!</em>
+            </p>
+        </div>
+    </div>
+
+</div>
 {{ end }}
