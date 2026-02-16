@@ -10,3 +10,6 @@ defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
+
+[seo]
+  keywords = ["Parkland area", "Dauphin", "Ethelbert Manitoba"]
