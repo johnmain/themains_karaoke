@@ -7,6 +7,7 @@ title = "Karaoke with John"
 copyright = "John Main Designs ©"
 
 [params]
+  description = "A searchable library of karaoke songs."
   dateFormat = "2 January 2006"
 
 
