@@ -80,3 +80,28 @@ h1, h2, h3, h4, h5, h6 {
 .search-result-item:last-child {
     border-bottom: none;
 }
+
+/* Scrollable Results Container */
+#searchResults {
+    max-height: 650px; /* Approximately 10 rows */
+    overflow-y: auto;
+    padding-right: 0.5rem; /* Prevents the scrollbar from overlapping text */
+}
+
+/* Custom scrollbar for a cleaner look */
+#searchResults::-webkit-scrollbar {
+    width: 8px;
+}
+
+#searchResults::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#searchResults::-webkit-scrollbar-thumb {
+    background-color: #4b5563; /* Tailwind gray-600 */
+    border-radius: 20px;
+}
+
+.dark #searchResults::-webkit-scrollbar-thumb {
+    background-color: #6b7280; /* Tailwind gray-500 */
+}
