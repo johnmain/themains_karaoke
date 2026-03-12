@@ -62,3 +62,21 @@ h1, h2, h3, h4, h5, h6 {
 .dark #searchInput:focus {
     border-color: #3b82f6;
 }
+
+/* Search Form Layout */
+.search-form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; /* Adds the padding between input and button */
+    margin-bottom: 2rem;
+}
+
+/* Search Results Styling */
+.search-result-item {
+    padding: 1rem;
+    border-bottom: 1px solid #6b7280; /* Adds the line between songs */
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
