@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Scrollable Results Container */
 #searchResults {
-    max-height: 650px; /* Approximately 10 rows */
+    max-height: 400px; /* Approximately 5 rows */
     overflow-y: auto;
     padding-right: 0.5rem; /* Prevents the scrollbar from overlapping text */
 }
