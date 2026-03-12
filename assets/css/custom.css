@@ -105,3 +105,18 @@ h1, h2, h3, h4, h5, h6 {
 .dark #searchResults::-webkit-scrollbar-thumb {
     background-color: #6b7280; /* Tailwind gray-500 */
 }
+
+/* Carousel Layout */
+.carousel-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
