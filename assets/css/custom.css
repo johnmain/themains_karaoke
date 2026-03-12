@@ -1,0 +1,26 @@
+/* Import modern sans-serif fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
+
+/* Improve body readability */
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.7;
+    color: #374151; /* Tailwind gray-700 */
+}
+
+/* Bold, modern headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #111827; /* Tailwind gray-900 */
+}
+
+/* Dark mode support */
+.dark body {
+    color: #d1d5db; /* Tailwind gray-300 */
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #f9fafb; /* Tailwind gray-50 */
+}
