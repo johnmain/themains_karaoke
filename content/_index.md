@@ -1,6 +1,6 @@
 ---
-title: "Karaoke Library"
-description: "Welcome to John's Karaoke Library in Ethelbert, Manitoba! Search our collection of thousands of songs to find your anthem for the night. Find songs by title or artist."
-keywords: ["karaoke", "Ethelbert", "Manitoba"]
+title: "Premium DJ Services"
+description: "Professional DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert, Manitoba. Making your events unforgettable."
+keywords: ["DJ", "weddings", "socials", "graduation", "Ethelbert", "Manitoba"]
 ---
-Use the search box below to find your favorite karaoke song by title or artist. Get ready to sing your heart out!
+Welcome to the premier DJ service in Ethelbert, Manitoba! Whether you're planning an elegant wedding, a lively community social, or an unforgettable graduation dance, we provide the perfect soundtrack for your special night.
