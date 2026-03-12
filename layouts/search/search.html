@@ -10,17 +10,17 @@
     </div>
 
     <!-- Search Interface -->
-    <div class="bg-white dark:bg-neutral-900 p-6 md:p-8 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800">
+    <div class="bg-white dark:bg-neutral-900 p-6 md:p-8 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800 mb-12">
         <div class="flex flex-col md:flex-row gap-4 mb-8">
             <input 
                 type="text" 
                 id="searchInput" 
                 placeholder="Search by song title or artist..." 
-                class="flex-1 px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none text-lg w-full"
+                class="flex-1 rounded-lg w-full"
             >
             <button 
                 id="searchButton" 
-                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg w-full md:w-auto"
+                class="rounded-lg w-full md:w-auto whitespace-nowrap"
             >
                 Search
             </button>
@@ -30,6 +30,18 @@
         <div id="searchResults" class="space-y-4">
             <!-- Search results will be injected here by your existing script -->
         </div>
+    </div>
+
+    <!-- Hosting Tips Section -->
+    <div class="prose dark:prose-invert max-w-none">
+        <h2>Hosting a Karaoke Night?</h2>
+        <p>Ready to bring the house down? Here are some quick tips to ensure your karaoke event is a legendary success:</p>
+        <ul>
+            <li><strong>Set the Stage:</strong> Make sure the lyrics are visible to everyone, not just the singer.</li>
+            <li><strong>Mix it Up:</strong> Alternate between upbeat bangers and power ballads to keep the energy dynamic.</li>
+            <li><strong>The Golden Rule:</strong> Cheering is mandatory! Support every performer, regardless of pitch or key.</li>
+        </ul>
+        <p><em>Grab a mic and let's go!</em></p>
     </div>
 
 </div>
