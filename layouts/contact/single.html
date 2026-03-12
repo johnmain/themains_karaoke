@@ -1,0 +1,102 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12 max-w-3xl">
+    
+    <h1 class="text-5xl font-extrabold mb-6 tracking-tight">{{ .Title }}</h1>
+    
+    <div class="prose dark:prose-invert max-w-none mb-12 text-lg">
+        {{ .Content }}
+    </div>
+
+    <!-- Booking Form -->
+    <div class="bg-white dark:bg-neutral-900 p-8 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800">
+        <form id="bookingForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Name</label>
+                    <input type="text" name="Name" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" name="Email" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Event Type</label>
+                    <select name="eventType" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none [&>option]:text-black">
+                        <option value="" disabled selected>Select an event...</option>
+                        <option value="Wedding">Wedding</option>
+                        <option value="Community Social">Community Social</option>
+                        <option value="Graduation Dance">Graduation Dance</option>
+                        <option value="Karaoke Night">Karaoke Night</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2">Event Date</label>
+                    <input type="date" name="date" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-sm font-medium mb-2">Message / Details</label>
+                <textarea name="Message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors">
+                Send Booking Request
+            </button>
+            
+            <div id="formStatus" class="hidden mt-4 p-4 rounded-lg text-center font-medium"></div>
+        </form>
+    </div>
+</div>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const form = e.target;
+    const submitBtn = document.getElementById('submitBtn');
+    const statusDiv = document.getElementById('formStatus');
+    
+    // Gather data
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Loading state
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Sending...';
+    statusDiv.classList.add('hidden');
+    statusDiv.classList.remove('bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+    
+    try {
+        const response = await fetch('/api/bookings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        statusDiv.classList.remove('hidden');
+        
+        if (response.ok && result.success) {
+            statusDiv.classList.add('bg-green-100', 'text-green-700');
+            statusDiv.innerText = 'Success! Your booking request has been sent.';
+            form.reset();
+        } else {
+            throw new Error(result.error || 'Failed to send request.');
+        }
+    } catch (error) {
+        statusDiv.classList.remove('hidden');
+        statusDiv.classList.add('bg-red-100', 'text-red-700');
+        statusDiv.innerText = 'Error: ' + error.message;
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Send Booking Request';
+    }
+});
+</script>
+{{ end }}
