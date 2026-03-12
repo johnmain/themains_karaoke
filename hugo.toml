@@ -17,7 +17,7 @@ title = 'Professional DJ Services in Manitoba'
 
 [[menu.main]]
   name = "Karaoke"
-  url = "/search"
+  url = "/karaoke/"
   weight = 30
 
 [[menu.main]]
