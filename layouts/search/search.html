@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12 max-w-4xl">
+    
+    <!-- Page Header -->
+    <h1 class="text-5xl font-extrabold mb-6 text-center tracking-tight">
+        {{ .Title }}
+    </h1>
+    <div class="text-xl text-neutral-600 dark:text-neutral-300 mb-10 text-center">
+        {{ .Content }}
+    </div>
+
+    <!-- Search Interface -->
+    <div class="bg-white dark:bg-neutral-900 p-6 md:p-8 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800">
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search by song title or artist..." 
+                class="flex-1 px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-transparent focus:ring-2 focus:ring-blue-600 outline-none text-lg w-full"
+            >
+            <button 
+                id="searchButton" 
+                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg w-full md:w-auto"
+            >
+                Search
+            </button>
+        </div>
+        
+        <!-- Results Container -->
+        <div id="searchResults" class="space-y-4">
+            <!-- Search results will be injected here by your existing script -->
+        </div>
+    </div>
+
+</div>
+
+<!-- Include your existing search scripts -->
+{{ partial "search-scripts.html" . }}
+{{ end }}
