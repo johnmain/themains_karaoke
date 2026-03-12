@@ -10,3 +10,4 @@ Thumbs.db
 
 # Hugo lock file
 .hugo_build.lock
+.dev.vars
