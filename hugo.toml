@@ -6,11 +6,6 @@ title = 'Professional DJ Services in Manitoba'
   description = 'Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable.'
 
 [[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 10
-
-[[menu.main]]
   name = "Services"
   url = "/#services"
   weight = 20
