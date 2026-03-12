@@ -30,9 +30,9 @@ async function loadSongs() {
       .map(r => {
         const s = r.item;
         return `
-          <div class="p-4 border-b border-neutral-200 dark:border-neutral-800 last:border-0">
-            <strong class="text-lg text-neutral-900 dark:text-white">${s.Artist}</strong><br>
-            <span class="text-neutral-600 dark:text-neutral-400">${s.Title}</span>
+          <div class="p-4 border-b border-gray-500 last:border-0">
+            <strong class="text-lg font-bold text-white">${s.Artist}</strong><br>
+            <span class="text-gray-300">${s.Title}</span>
           </div>
         `;
       })
