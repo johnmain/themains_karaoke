@@ -17,7 +17,7 @@
             
             <!-- Weddings -->
             <div class="carousel-item">
-                <div class="h-full border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
+                <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/wedding.png" }}
                     <img src="{{ .RelPermalink }}" alt="Weddings" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
@@ -32,7 +32,7 @@
 
             <!-- Community Socials -->
             <div class="carousel-item">
-                <div class="h-full border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
+                <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/social.png" }}
                     <img src="{{ .RelPermalink }}" alt="Community Socials" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
@@ -47,7 +47,7 @@
 
             <!-- Graduation Dances -->
             <div class="carousel-item">
-                <div class="h-full border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
+                <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/graduation.png" }}
                     <img src="{{ .RelPermalink }}" alt="Graduation Dances" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
@@ -62,7 +62,7 @@
 
             <!-- Karaoke Services -->
             <div class="carousel-item">
-                <div class="h-full border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-neutral-50 dark:bg-neutral-900 flex flex-col overflow-hidden">
+                <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/karaoke.png" }}
                     <img src="{{ .RelPermalink }}" alt="Karaoke Nights" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}

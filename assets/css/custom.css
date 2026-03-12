@@ -164,3 +164,24 @@ h1, h2, h3, h4, h5, h6 {
         right: 2rem;
     }
 }
+
+/* Service Card Hover & Shadow Effects */
+.service-card {
+    border-radius: 1.5rem; /* Smooth, rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.05); /* Deep hovering shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* Lifts the card up slightly on hover */
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.2), 0 15px 15px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode shadow adjustments */
+.dark .service-card {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.dark .service-card:hover {
+    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.6), 0 15px 15px -5px rgba(0, 0, 0, 0.4);
+}
