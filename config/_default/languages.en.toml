@@ -3,11 +3,11 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "Karaoke with John"
+title = "Maintec Entertainment"
 copyright = "John Main Designs ©"
 
 [params]
-  description = "A searchable library of karaoke songs."
+  description = "Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable."
   dateFormat = "2 January 2006"
 
 
