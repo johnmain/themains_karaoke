@@ -111,7 +111,7 @@
             let autoPlayInterval;
 
             function updateCarousel() {
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                track.style.transform = `translateX(calc(7.5% - ${currentIndex * 85}%))`;
                 
                 Array.from(indicators).forEach((ind, i) => {
                     if (i === currentIndex) {

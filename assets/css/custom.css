@@ -115,9 +115,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-item {
-    flex: 0 0 100%;
-    width: 100%;
-    padding: 0 0.5rem;
+    flex: 0 0 85%;
+    width: 85%;
+    padding: 0 10px; /* Creates a nice gap between the cards */
     box-sizing: border-box;
 }
 
