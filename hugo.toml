@@ -1,3 +1,26 @@
 baseURL = 'https://karaoke.themains.org'
 languageCode = 'en-us'
-title = 'Karaoke Song Library'
+title = 'Professional DJ Services in Manitoba'
+
+[params]
+  description = 'Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable.'
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Services"
+  url = "/#services"
+  weight = 20
+
+[[menu.main]]
+  name = "Karaoke"
+  url = "/search"
+  weight = 30
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact"
+  weight = 40
