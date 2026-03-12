@@ -11,45 +11,95 @@
         </div>
     </div>
 
-    <!-- Services Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
-        
-        <!-- Weddings -->
-        <div class="p-8 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <h2 class="text-3xl font-bold mb-4">Weddings</h2>
-            <p class="text-neutral-600 dark:text-neutral-400">
-                Create the perfect atmosphere for your special day. From the ceremony to the last dance, we provide tailored playlists and professional MC services to make your wedding unforgettable.
-            </p>
+    <!-- Services Section (Carousel) -->
+    <div id="services" class="max-w-2xl mx-auto mb-20 relative overflow-hidden px-4 pt-4 pb-8">
+        <div id="carouselTrack" class="flex transition-transform duration-700 ease-in-out items-stretch">
+            
+            <!-- Weddings -->
+            <div class="w-full flex-shrink-0 px-2">
+                <div class="h-full p-10 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-white dark:bg-neutral-800 flex flex-col justify-center text-center">
+                    <h2 class="text-3xl font-bold mb-4">Weddings</h2>
+                    <p class="text-neutral-600 dark:text-neutral-300">
+                        Create the perfect atmosphere for your special day. From the ceremony to the last dance, we provide tailored playlists and professional MC services to make your wedding unforgettable.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Community Socials -->
+            <div class="w-full flex-shrink-0 px-2">
+                <div class="h-full p-10 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-white dark:bg-neutral-800 flex flex-col justify-center text-center">
+                    <h2 class="text-3xl font-bold mb-4">Community Socials</h2>
+                    <p class="text-neutral-600 dark:text-neutral-300">
+                        Keep the dance floor packed all night long! We know exactly how to read the crowd and keep the energy high for your community fundraisers and socials.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Graduation Dances -->
+            <div class="w-full flex-shrink-0 px-2">
+                <div class="h-full p-10 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-white dark:bg-neutral-800 flex flex-col justify-center text-center">
+                    <h2 class="text-3xl font-bold mb-4">Graduation Dances</h2>
+                    <p class="text-neutral-600 dark:text-neutral-300">
+                        Celebrate your achievements with the latest hits and timeless anthems. We bring the club experience to your grad dance with premium sound and lighting.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Karaoke Services -->
+            <div class="w-full flex-shrink-0 px-2">
+                <div class="h-full p-10 border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-lg bg-neutral-50 dark:bg-neutral-900 flex flex-col justify-center text-center">
+                    <h2 class="text-3xl font-bold mb-4">Karaoke Nights 🎤</h2>
+                    <p class="text-neutral-600 dark:text-neutral-300 mb-6">
+                        Ready to bring the house down? Browse our massive collection of thousands of songs, find your anthem, and get ready to shine on stage.
+                    </p>
+                    <div>
+                        <a href="/karaoke/" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Search Karaoke Library
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Community Socials -->
-        <div class="p-8 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <h2 class="text-3xl font-bold mb-4">Community Socials</h2>
-            <p class="text-neutral-600 dark:text-neutral-400">
-                Keep the dance floor packed all night long! We know exactly how to read the crowd and keep the energy high for your community fundraisers and socials.
-            </p>
+        <!-- Carousel Indicators -->
+        <div class="flex justify-center gap-3 mt-8" id="carouselIndicators">
+            <button class="w-3 h-3 rounded-full bg-blue-600 transition-colors"></button>
+            <button class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-600 transition-colors"></button>
+            <button class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-600 transition-colors"></button>
+            <button class="w-3 h-3 rounded-full bg-neutral-300 dark:bg-neutral-600 transition-colors"></button>
         </div>
-
-        <!-- Graduation Dances -->
-        <div class="p-8 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-            <h2 class="text-3xl font-bold mb-4">Graduation Dances</h2>
-            <p class="text-neutral-600 dark:text-neutral-400">
-                Celebrate your achievements with the latest hits and timeless anthems. We bring the club experience to your grad dance with premium sound and lighting.
-            </p>
-        </div>
-
-        <!-- Karaoke Services -->
-        <div class="p-8 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-neutral-50 dark:bg-neutral-900">
-            <h2 class="text-3xl font-bold mb-4">Karaoke Nights 🎤</h2>
-            <p class="text-neutral-600 dark:text-neutral-400 mb-6">
-                Ready to bring the house down? Browse our massive collection of thousands of songs, find your anthem, and get ready to shine on stage.
-            </p>
-            <a href="/karaoke/" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Search Karaoke Library
-            </a>
-        </div>
-
     </div>
+
+    <!-- Carousel Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('carouselTrack');
+            const slides = track.children;
+            const indicators = document.getElementById('carouselIndicators').children;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                Array.from(indicators).forEach((ind, i) => {
+                    if (i === currentIndex) {
+                        ind.classList.remove('bg-neutral-300', 'dark:bg-neutral-600');
+                        ind.classList.add('bg-blue-600');
+                    } else {
+                        ind.classList.add('bg-neutral-300', 'dark:bg-neutral-600');
+                        ind.classList.remove('bg-blue-600');
+                    }
+                });
+            }
+
+            // Change slide every 4 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel();
+            }, 4000);
+        });
+    </script>
 
 </div>
 {{ end }}
