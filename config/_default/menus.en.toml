@@ -1,14 +1,17 @@
 [[main]]
+  identifier = "services"
   name = "Services"
   url = "/#services"
   weight = 10
 
 [[main]]
+  identifier = "karaoke"
   name = "Karaoke"
   url = "/karaoke/"
   weight = 20
 
 [[main]]
+  identifier = "contact"
   name = "Contact"
-  url = "/contact"
+  url = "/contact/"
   weight = 30
