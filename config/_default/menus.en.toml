@@ -21,3 +21,8 @@
   name = "Contact"
   url = "/contact/"
   weight = 30
+
+[[social]]
+  name = "Facebook"
+  url = "https://www.facebook.com/MaintecEntertainment/"
+  weight = 10
