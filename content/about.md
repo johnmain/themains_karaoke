@@ -5,6 +5,8 @@ keywords: ["DJ John Main", "Karaoke with John", "Manitoba DJ", "Wedding DJ", "So
 author: "John Main"
 images: ["/images/social.png"]
 draft: false
+showDate: false
+showPagination: false
 ---
 
 ![Karaoke with John Old Logo](/homer.png)
