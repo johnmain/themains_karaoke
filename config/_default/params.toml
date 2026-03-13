@@ -17,7 +17,7 @@ logo = "logo.png"
 favicon = "favicon.png"
 
 [header]
-  layout = "fixed"
+  layout = "hybrid"
   showTitle = false
 
 [seo]
