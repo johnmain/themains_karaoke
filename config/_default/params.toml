@@ -11,11 +11,13 @@ autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
 
+description = "Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable."
+
 logo = "logo.png"
 favicon = "favicon.png"
 
 [header]
-  layout = "hybrid"
+  layout = "fixed"
   showTitle = false
 
 [seo]
