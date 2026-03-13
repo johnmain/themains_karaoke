@@ -11,8 +11,12 @@ autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
 
+logo = "logo.png"
+favicon = "favicon.png"
+
 [header]
   layout = "hybrid"
+  showTitle = false
 
 [seo]
   keywords = ["Parkland Area", "Dauphin Manitoba", "Ethelbert Manitoba"]
