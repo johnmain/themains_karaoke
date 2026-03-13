@@ -11,5 +11,8 @@ autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
 
+[header]
+  layout = "fixed"
+
 [seo]
   keywords = ["Parkland Area", "Dauphin Manitoba", "Ethelbert Manitoba"]
