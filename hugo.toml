@@ -5,6 +5,9 @@ title = 'Maintec Entertainment'
 [params]
   description = 'Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable.'
 
+[params.header]
+  layout = "fixed"
+
 [[menu.main]]
   name = "Services"
   url = "/#services"
