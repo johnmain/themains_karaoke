@@ -192,3 +192,20 @@ h1, h2, h3, h4, h5, h6 {
 .dark .service-card:hover {
     box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.6), 0 15px 15px -5px rgba(0, 0, 0, 0.4);
 }
+
+/* Mobile-only font size adjustments */
+@media (max-width: 767px) {
+    .hero-desc {
+        font-size: 1.125rem !important;
+        line-height: 1.75rem !important;
+    }
+    .card-title {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    .card-desc {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+    }
+}
