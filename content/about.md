@@ -11,4 +11,4 @@ draft: false
 
 DJ John Main started "Karaoke with John" in 2012 in Midwestern Ontario. Over the years, John has hosted several memorable Karaoke nights in the town of Palmerston and a Valentine's Dance in Walton. He also provided a Music team for the Brussels Mennonite Fellowship Community Church.
 
-After moving to Manitoba in the Spring of 2024, we started hosting Karaoke at the Ethelbert Curling Club in 2026. Following several successful turnouts, requests started coming in to provide DJ services for Social Buck and Does and Weddings.
+Following a relocation to Manitoba in the spring of 2024, we resumed hosting karaoke events, including highly successful nights at the Ethelbert Curling Club. As these events grew in popularity, we began receiving numerous requests to provide comprehensive DJ services for weddings, socials, and buck-and-does. To better reflect this expanded range of full-service entertainment options, "Karaoke with John" was officially rebranded as Maintec Entertainment.
