@@ -11,6 +11,12 @@
   weight = 20
 
 [[main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 25
+
+[[main]]
   identifier = "contact"
   name = "Contact"
   url = "/contact/"

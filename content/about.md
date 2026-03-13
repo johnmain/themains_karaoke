@@ -1,6 +1,9 @@
 ---
 title: "About"
-description: "About DJ John Main and Karaoke with John"
+description: "Learn about DJ John Main, the history of Karaoke with John, and our DJ services for weddings and social events in Manitoba."
+keywords: ["DJ John Main", "Karaoke with John", "Manitoba DJ", "Wedding DJ", "Social Buck and Doe", "Ethelbert Curling Club"]
+author: "John Main"
+images: ["/images/social.png"]
 draft: false
 ---
 
