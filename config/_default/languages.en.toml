@@ -4,7 +4,7 @@ languageDirection = "ltr"
 weight = 1
 
 title = "Maintec Entertainment"
-copyright = "John Main Designs ©"
+copyright = "[John Main Designs ©](mailto:info@themains2.org)"
 
 [params]
   description = "Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable."
