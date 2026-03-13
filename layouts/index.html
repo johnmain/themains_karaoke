@@ -19,13 +19,17 @@
             <div class="carousel-item">
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/wedding.png" }}
-                    <img src="{{ .RelPermalink }}" alt="Weddings" class="w-full h-48 md:h-64 object-cover">
+                    {{ $image := .Resize "800x webp q80" }}
+                    <img src="{{ $image.RelPermalink }}" alt="Weddings" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="text-3xl font-bold mb-4">Weddings</h2>
-                        <p class="text-neutral-600 dark:text-neutral-300">
+                        <p class="text-neutral-600 dark:text-neutral-300 flex-1">
                             Create the perfect atmosphere for your special day. From the ceremony to the last dance, we provide tailored playlists and professional MC services to make your wedding unforgettable.
                         </p>
+                        <div class="mt-6">
+                            <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,13 +38,17 @@
             <div class="carousel-item">
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/social.png" }}
-                    <img src="{{ .RelPermalink }}" alt="Community Socials" class="w-full h-48 md:h-64 object-cover">
+                    {{ $image := .Resize "800x webp q80" }}
+                    <img src="{{ $image.RelPermalink }}" alt="Community Socials" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="text-3xl font-bold mb-4">Community Socials</h2>
-                        <p class="text-neutral-600 dark:text-neutral-300">
-                            Keep the dance floor packed all night long! We know exactly how to read the crowd and keep the energy high for your community fundraisers and socials.
+                        <p class="text-neutral-600 dark:text-neutral-300 flex-1">
+                            Keep the dance floor packed all night long! We know exactly how to read the crowd and keep the energy high for your Manitoba Socials, Buck and Does, and community fundraisers.
                         </p>
+                        <div class="mt-6">
+                            <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -49,13 +57,17 @@
             <div class="carousel-item">
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/graduation.png" }}
-                    <img src="{{ .RelPermalink }}" alt="Graduation Dances" class="w-full h-48 md:h-64 object-cover">
+                    {{ $image := .Resize "800x webp q80" }}
+                    <img src="{{ $image.RelPermalink }}" alt="Graduation Dances" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="text-3xl font-bold mb-4">Graduation Dances</h2>
-                        <p class="text-neutral-600 dark:text-neutral-300">
+                        <p class="text-neutral-600 dark:text-neutral-300 flex-1">
                             Celebrate your achievements with the latest hits and timeless anthems. We bring the club experience to your grad dance with premium sound and lighting.
                         </p>
+                        <div class="mt-6">
+                            <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,17 +76,17 @@
             <div class="carousel-item">
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/karaoke.png" }}
-                    <img src="{{ .RelPermalink }}" alt="Karaoke Nights" class="w-full h-48 md:h-64 object-cover">
+                    {{ $image := .Resize "800x webp q80" }}
+                    <img src="{{ $image.RelPermalink }}" alt="Karaoke Nights" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="text-3xl font-bold mb-4">Karaoke Nights 🎤</h2>
-                        <p class="text-neutral-600 dark:text-neutral-300 mb-6">
+                        <p class="text-neutral-600 dark:text-neutral-300 mb-6 flex-1">
                             Ready to bring the house down? Browse our massive collection of thousands of songs, find your anthem, and get ready to shine on stage.
                         </p>
-                        <div>
-                            <a href="/karaoke/" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                                Search Karaoke Library
-                            </a>
+                        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                            <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Now</a>
+                            <a href="/karaoke/" class="inline-block bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-white px-6 py-3 rounded-lg font-semibold hover:bg-neutral-300 dark:hover:bg-neutral-600 transition-colors">Search Library</a>
                         </div>
                     </div>
                 </div>
