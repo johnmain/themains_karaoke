@@ -13,13 +13,16 @@ defaultThemeColor = "#FFFFFF"
 
 description = "Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable."
 
-
 favicon = "favicon.png"
 
 [header]
   layout = "hybrid"
   showTitle = false
   logo = "logo.png"
+  showSocial = true
 
 [seo]
   keywords = ["Parkland Area", "Dauphin Manitoba", "Ethelbert Manitoba"]
+
+[footer]
+  showSocial = true

@@ -10,12 +10,12 @@ copyright = "[John Main Designs ©](mailto:info@themains2.org)"
   description = "Premium DJ services for Weddings, Community Socials, and Graduation Dances in Ethelbert and across Manitoba. Making your events unforgettable."
   dateFormat = "2 January 2006"
 
-
+# This is the critical block for Congo social icons
 [params.author]
-  # name = "John Main"
-  # image = "img/author.jpg"
-  # headline = "I'm only human"
-  # bio = "A little bit about you"
-  links = [
-    { facebook = "https://www.facebook.com/MaintecEntertainment/" }
-  ]
+  name = "Maintec Entertainment"
+
+[[params.author.links]]
+  facebook = "https://www.facebook.com/MaintecEntertainment/"
+
+[[params.author.links]]
+  email = "mailto:info@themains.org"

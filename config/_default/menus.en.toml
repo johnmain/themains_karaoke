@@ -22,7 +22,10 @@
   url = "/contact/"
   weight = 30
 
-[[social]]
-  name = "Facebook"
+[[main]]
+  identifier = "facebook"
+  name = ""
   url = "https://www.facebook.com/MaintecEntertainment/"
-  weight = 10
+  weight = 40
+  [main.params]
+    icon = "facebook"
