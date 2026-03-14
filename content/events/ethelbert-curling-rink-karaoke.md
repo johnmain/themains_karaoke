@@ -1,6 +1,6 @@
 ---
 title: "Ethelbert Curling Rink Karaoke"
-date: 2026-05-24
+date: 2026-03-14
 description: "Join us for Karaoke at the Ethelbert Curling Rink on March 20th."
 draft: false
 ---
