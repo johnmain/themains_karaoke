@@ -2,6 +2,7 @@
 title: "Contact Us"
 description: "Get in touch to book your next event."
 type: "contact"
+images: ["/logo.png"]
 ---
 
 Ready to book your event or have some questions? Fill out the form below and we'll get back to you as soon as possible!
