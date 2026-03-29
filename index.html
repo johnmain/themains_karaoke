@@ -130,19 +130,6 @@
 
     updateCarousel();
 
-    // Auto-scroll every 5 seconds
-    let autoScrollInterval = setInterval(() => {
-        goToSlide(currentIndex + 1);
-    }, 5000);
-
-    // Pause on hover
-    track.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-    track.addEventListener('mouseleave', () => {
-        autoScrollInterval = setInterval(() => {
-            goToSlide(currentIndex + 1);
-        }, 5000);
-    });
-
 })();
 </script>
 
@@ -170,6 +157,7 @@
     display: flex;
     gap: 6px;
     padding-bottom: 24px;
+    justify-content: center;
 }
 
 .dot {
