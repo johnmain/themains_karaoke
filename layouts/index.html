@@ -9,37 +9,5 @@
         </div>
     </div>
 
-    <!-- Services Section (Carousel) -->
-    <div id="services" class="max-w-2xl mx-auto mb-20 relative overflow-hidden px-4 pt-4 pb-8">
-        <div id="carouselTrack" class="carousel-track items-stretch">
-            
-            <!-- Weddings -->
-            <div class="carousel-item">
-                <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
-                    {{ with resources.Get "images/wedding.png" }}
-                    {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Weddings" class="w-full h-48 md:h-64 object-cover">
-                    {{ end }}
-                    <div class="p-8 flex flex-col justify-center text-center flex-1">
-                        <h2 class="card-title text-3xl font-bold mb-4">Weddings</h2>
-                        <p class="card-desc text-neutral-600 dark:text-neutral-300 flex-1">
-                            Create the perfect atmosphere for your special day. From the ceremony to the last dance, we provide tailored playlists and professional MC services to make your wedding unforgettable.
-                        </p>
-                        <div class="mt-6">
-                            <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Community Socials -->
-            <div class="carousel-item">
-                <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
-                    {{ with resources.Get "images/social.png" }}
-                    {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Community Socials" class="w-full h-48 md:h-64 object-cover">
-                    {{ end }}
-                    <div class="p-8 flex flex-col justify-center text-center flex-1">
-                        <h2 class="card-title text-3xl font-bold mb-4">Community Socials</h2>
-                        <p class="card-desc text-neutral-600 dark:text-neutral-300 flex-1">
-                            Keep the dance floor packed all night long! We know exactly how to read the crowd and keep the energy high for your Manitoba Socials, Buck and Does, and community fundraisers.
+</div>
+{{ end }}
