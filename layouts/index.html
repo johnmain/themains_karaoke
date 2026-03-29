@@ -93,8 +93,135 @@
         </div>
 
         <!-- Carousel Controls (Prev/Next) -->
-        <button id="prevBtn" class="carousel-btn carousel-btn-prev" aria-label="Previous">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+        <button id="prevBtn" class="carousel-btn carousel-btn-prev absolute left-0 top-1/2 -translate-y-1/2 -ml-4 p-3 rounded-full bg-neutral-800 dark:bg-neutral-700 text-white hover:bg-neutral-700 dark:hover:bg-neutral-600 transition-colors" aria-label="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
         </button>
-        <button id="nextBtn" class="carousel-btn carousel-btn-next" aria-label="Next">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-line
+        <button id="nextBtn" class="carousel-btn carousel-btn-next absolute right-0 top-1/2 -translate-y-1/2 -mr-4 p-3 rounded-full bg-neutral-800 dark:bg-neutral-700 text-white hover:bg-neutral-700 dark:hover:bg-neutral-600 transition-colors" aria-label="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+        </button>
+
+        <!-- Carousel Navigation Dots -->
+        <div id="carouselDots" class="carousel-dots absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3"></div>
+
+    </div>
+
+</div>
+
+<script>
+(function() {
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    let currentIndex = 0;
+    const items = Array.from(track.children);
+    const totalItems = items.length;
+
+    // Create navigation dots
+    items.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `dot ${index === currentIndex ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = Array.from(dotsContainer.children);
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function goToSlide(index) {
+        // Handle circular navigation
+        let newIndex = index;
+        while (newIndex < 0) newIndex += totalItems;
+        while (newIndex >= totalItems) newIndex -= totalItems;
+        
+        currentIndex = newIndex;
+        updateCarousel();
+        updateDots();
+    }
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
+        if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
+    });
+
+    updateCarousel();
+})();
+</script>
+
+<style>
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 6px;
+    padding-bottom: 24px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background-color: #3b82f6;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .carousel-btn {
+        opacity: 0.4;
+    }
+    
+    .carousel-btn:hover,
+    .carousel-btn:focus-visible {
+        opacity: 1;
+    }
+}
+</style>
+{{ end }}
