@@ -18,7 +18,7 @@
                 <div class="service-card border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/wedding.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Weddings" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Weddings" class="w-full h-[88px] md:h-[120px] object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Weddings</h2>
@@ -37,7 +37,7 @@
                 <div class="service-card border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/social.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Community Socials" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Community Socials" class="w-full h-[88px] md:h-[120px] object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Community Socials</h2>
@@ -56,7 +56,7 @@
                 <div class="service-card border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/graduation.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Graduation Dances" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Graduation Dances" class="w-full h-[88px] md:h-[120px] object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Graduation Dances</h2>
@@ -75,7 +75,7 @@
                 <div class="service-card border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/karaoke.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Karaoke Nights" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Karaoke Nights" class="w-full h-[88px] md:h-[120px] object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Karaoke Nights 🎤</h2>
