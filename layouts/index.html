@@ -1,4 +1,37 @@
 {{ define "main" }}
+<!-- LocalBusiness JSON-LD Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EntertainmentBusiness",
+  "name": "{{ site.Params.localBusiness.name }}",
+  "image": "{{ absURL site.Params.header.logo }}",
+  "@id": "{{ site.BaseURL }}",
+  "url": "{{ site.BaseURL }}",
+  "telephone": "{{ site.Params.localBusiness.telephone }}",
+  "email": "{{ site.Params.localBusiness.email }}",
+  "priceRange": "{{ site.Params.localBusiness.priceRange }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.Params.localBusiness.streetAddress }}",
+    "addressLocality": "{{ site.Params.localBusiness.addressLocality }}",
+    "addressRegion": "{{ site.Params.localBusiness.addressRegion }}",
+    "postalCode": "{{ site.Params.localBusiness.postalCode }}",
+    "addressCountry": "{{ site.Params.localBusiness.addressCountry }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.Params.localBusiness.latitude }},
+    "longitude": {{ site.Params.localBusiness.longitude }}
+  },
+  "areaServed": [
+    {{ range $index, $area := site.Params.localBusiness.areaServed }}
+      {{ if $index }}, {{ end }}"{{ $area }}"
+    {{ end }}
+  ],
+  "description": "{{ site.Params.description }}"
+}
+</script>
 <div class="container mx-auto px-4 py-12">
     
     <!-- Hero Section -->

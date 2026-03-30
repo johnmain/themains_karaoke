@@ -26,3 +26,17 @@ favicon = "favicon.png"
 
 [footer]
   showSocial = true
+
+[localBusiness]
+  name = "Maintec Entertainment"
+  telephone = "+1-204-647-7665"
+  email = "bookings@themains.org"
+  priceRange = "$$"
+  streetAddress = "Serving Ethelbert and Surrounding Areas"
+  addressLocality = "Ethelbert"
+  addressRegion = "MB"
+  postalCode = "R0L 0T0"
+  addressCountry = "CA"
+  latitude = "51.5283"
+  longitude = "-100.2236"
+  areaServed = ["Ethelbert", "Dauphin", "Parkland Region", "Western Manitoba"]
