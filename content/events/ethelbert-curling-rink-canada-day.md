@@ -24,7 +24,7 @@ DJ John Main is bringing the high-energy vibes and crystal-clear sound straight 
 🤝 **Community Vibe:** This is more than just a party—it's a chance to connect with neighbours, celebrate our local spirit, and kick off the summer right here in the Parkland region.
 
 **📍 Where:** Ethelbert Curling Rink, Ethelbert, MB  
-**📅 When:** Canada Day, June 1st  
+**📅 When:** Canada Day, July 1st  
 **⏰ Time:** Doors open at 12:00 PM | Opening ceremony at 1:00 PM (Beer gardens open immediately after)  
 
 Bring your family, your friends, and your appetite for fun. Let's make this Canada Day one for the books!
