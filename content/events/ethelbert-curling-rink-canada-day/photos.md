@@ -2,7 +2,7 @@
 title: "Canada Day Bash - Photo Gallery"
 description: "Photos from the Canada Day Bash at the Ethelbert Curling Rink."
 showDate: false
-draft: false
+draft: true
 ---
 
 Photos from the Canada Day Bash at the Ethelbert Curling Rink!
