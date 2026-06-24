@@ -27,15 +27,37 @@
 
   {{ if .Sections }}
     <section>
-      {{ range .Sections }}
-        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-          <a href="{{ .Permalink }}">{{ .Title | emojify }}</a>
-        </h2>
-        <div style="margin-left: 1.5rem">
-          {{ range where .Pages "Parent.IsSection" true }}
+      {{ $groupByYear := .Params.groupByYear | default (.Site.Params.list.groupByYear | default true) }}
+
+      {{ if $groupByYear }}
+        {{ $sortedSections := sort .Sections ".Date" "desc" }}
+        {{ range $sortedSections.GroupByDate "2006" }}
+          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+            {{ .Key }}
+          </h2>
+          <hr class="w-36 border-dotted border-neutral-400" />
+          {{ range .Pages }}
             {{ partial "article-link.html" . }}
+            {{ with .Pages }}
+              <div style="margin-left: 1.5rem">
+                {{ range . }}
+                  {{ partial "article-link.html" . }}
+                {{ end }}
+              </div>
+            {{ end }}
           {{ end }}
-        </div>
+        {{ end }}
+      {{ else }}
+        {{ range sort .Sections ".Date" "desc" }}
+          {{ partial "article-link.html" . }}
+          {{ with .Pages }}
+            <div style="margin-left: 1.5rem">
+              {{ range . }}
+                {{ partial "article-link.html" . }}
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
       {{ end }}
     </section>
     {{ partial "pagination.html" . }}
