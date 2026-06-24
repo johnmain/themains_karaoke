@@ -31,7 +31,7 @@
         <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
           <a href="{{ .Permalink }}">{{ .Title | emojify }}</a>
         </h2>
-        <div class="ps-4">
+        <div style="margin-left: 1.5rem">
           {{ range where .Pages "Parent.IsSection" true }}
             {{ partial "article-link.html" . }}
           {{ end }}
