@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Categories on Maintec Entertainment</title>
+		<title>Categories on DJ &amp; Karaoke Services in Ethelbert &amp; Parkland, MB | Maintec Entertainment</title>
 		<link>http://localhost:1313/categories/</link>
-		<description>Recent content in Categories on Maintec Entertainment</description>
+		<description>Recent content in Categories on DJ &amp; Karaoke Services in Ethelbert &amp; Parkland, MB | Maintec Entertainment</description>
 		<generator>Hugo</generator>
 		<language>en</language>
 		
@@ -12,13 +12,13 @@
 			<copyright>[John Main Designs ©](mailto:info@themains2.org)</copyright>
 		
 		
-			<lastBuildDate>Tue, 05 May 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Wed, 24 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Events</title>
 				<link>http://localhost:1313/categories/events/</link>
-				<pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+				<pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/categories/events/</guid>
 				<description></description>
 			</item>

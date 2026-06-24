@@ -8,6 +8,19 @@ body {
     color: #374151; /* Tailwind gray-700 */
 }
 
+/* Ensure bold text actually renders bold (reversing Tailwind's aggressive CSS reset) */
+strong, b {
+    font-weight: 700;
+}
+
+/* Hero Description Spacing & Layout */
+.hero-desc p {
+    margin-bottom: 1.5rem;
+}
+.hero-desc p:last-child {
+    margin-bottom: 0;
+}
+
 /* Make main text slightly smaller ONLY on mobile phones */
 @media (max-width: 767px) {
     body {
