@@ -29,33 +29,6 @@ Maintec Entertainment provides professional DJ, MC, and Karaoke services for:
 - **Karaoke Nights** — Private bookings and public events with our extensive song library
 - **Private Parties** — Birthdays, anniversaries, house parties, and more
 
-### How far in advance should I book?
-
-For weddings and popular events, we recommend booking **at least 3–6 months in advance**. For community socials and karaoke nights, **2–4 weeks** is typically sufficient. However, availability varies seasonally — contact us early to secure your date.
-
-### Do you travel outside the Parkland Region?
-
-Yes! While we're based in **Ethelbert, Manitoba**, we regularly serve events throughout **Western Manitoba**, including Dauphin, Brandon, Miniota, Rosser, Tryon, Carberry, and surrounding rural communities. Travel fees may apply for locations beyond a 100km radius of Ethelbert.
-
-### What's included in your DJ packages?
-
-Our packages include:
-
-- **Premium sound system** with high-fidelity speakers and mixers
-- **Dynamic lighting** to set the mood for your event
-- **Professional MC services** to keep the event running smoothly
-- **Extensive music library** — we'll work with you to create a custom playlist
-- **Backup equipment** — we never let technical issues ruin the party
-
-### Do you provide karaoke equipment for events?
-
-Absolutely! Our professional karaoke setup includes:
-
-- **Wireless microphones** (multiple available)
-- **Song display system** with lyrics
-- **Thousands of songs** across every genre — country, classic rock, 80s, metal, pop, and more
-- **Request system** so guests can submit their favourite songs
-
 ### What genres of music do you specialize in?
 
 Our specialties include **Classic Rock, 80s hits, Hard Rock, Metal, and Country**. But we play whatever keeps your dance floor packed — from current chart-toppers to old-school country classics. We pride ourselves on reading the crowd and keeping the energy right for your event.
