@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="prose prose-neutral dark:prose-invert max-w-none">
+  <header class="mb-8">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="text-lg text-neutral-600 dark:text-neutral-300">{{ . }}</p>{{ end }}
+  </header>
+  {{ .Content }}
+</article>
+{{ end }}

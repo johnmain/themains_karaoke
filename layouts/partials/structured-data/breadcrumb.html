@@ -1,0 +1,30 @@
+{{/* BreadcrumbList Structured Data for list/taxonomy pages */}}
+{{- $p := . -}}
+{{- $items := slice -}}
+{{- $pos := 1 -}}
+
+{{- with $p.Parent -}}
+  {{- if and .Parent (not .IsHome) -}}
+    {{- $items = $items | append (dict "position" $pos "name" .Title "item" .Permalink) -}}
+    {{- $pos = add $pos 1 -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $items = $items | append (dict "position" $pos "name" $p.Title "item" $p.Permalink) -}}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{ range $i, $item := $items }}
+    {{ if $i }}, {{ end }}{
+      "@type": "ListItem",
+      "position": {{ $item.position }},
+      "name": {{ $item.name | jsonify }},
+      "item": {{ $item.item | jsonify }}
+    }
+    {{ end }}
+  ]
+}
+</script>

@@ -1,0 +1,43 @@
+{{/* Event Structured Data for individual event pages */}}
+{{- $e := . -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ $e.Title }}",
+  "description": "{{ with $e.Description }}{{ . | plainify }}{{ else }}{{ $e.Summary | plainify }}{{ end }}",
+  "url": "{{ $e.Permalink }}",
+  "image": [
+    {{ with $e.Params.images }}
+      {{ range . }}"{{ absURL . }}"{{ if ne . (index $.Params.images (sub (len $.Params.images) 1)) }},{{ end }}
+      {{ end }}
+    {{ else }}
+      "{{ absURL site.Params.header.logo }}"
+    {{ end }}
+  ],
+  "startDate": "{{ $e.Date.Format "2006-01-02" }}",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Ethelbert Curling Rink",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ethelbert",
+      "addressRegion": "MB",
+      "addressCountry": "CA"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "{{ site.Params.localBusiness.name }}",
+    "url": "{{ site.BaseURL }}"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "CAD",
+    "lowPrice": "0",
+    "offerCount": "1"
+  }
+}
+</script>

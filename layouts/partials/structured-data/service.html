@@ -1,0 +1,24 @@
+{{/* Service Structured Data for home page — lists all services */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "DJ and Karaoke Entertainment",
+  "provider": {
+    "@type": "EntertainmentBusiness",
+    "name": "{{ site.Params.localBusiness.name }}",
+    "url": "{{ site.BaseURL }}"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Manitoba"
+  },
+  "description": "{{ site.Params.description }}",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "CAD",
+    "lowPrice": "0",
+    "offerCount": "4"
+  }
+}
+</script>

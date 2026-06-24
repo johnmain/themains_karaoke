@@ -1,0 +1,27 @@
+{{/* Extend head — inject custom structured data and SEO markup */}}
+{{- $p := . -}}
+
+{{/* --- LocalBusiness schema on EVERY page --- */}}
+{{- partial "structured-data/local-business.html" $p -}}
+
+{{/* --- Home page: Service schema --- */}}
+{{- if $p.IsHome -}}
+  {{- partial "structured-data/service.html" $p -}}
+{{- end -}}
+
+{{/* --- Event pages: Event schema --- */}}
+{{- if eq $p.Section "events" -}}
+  {{- if not $p.IsSection -}}
+    {{- partial "structured-data/event.html" $p -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* --- Contact page: FAQ schema --- */}}
+{{- if eq $p.Type "contact" -}}
+  {{- partial "structured-data/faq.html" $p -}}
+{{- end -}}
+
+{{/* --- Breadcrumbs on non-home pages --- */}}
+{{- if not $p.IsHome -}}
+  {{- partial "structured-data/breadcrumb.html" $p -}}
+{{- end -}}

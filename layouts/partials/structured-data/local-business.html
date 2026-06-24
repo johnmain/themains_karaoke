@@ -1,0 +1,33 @@
+{{/* LocalBusiness Structured Data for non-home pages */}}
+{{- $p := . -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EntertainmentBusiness",
+  "name": "{{ site.Params.localBusiness.name }}",
+  "image": "{{ absURL site.Params.header.logo }}",
+  "url": "{{ $p.Permalink }}",
+  "telephone": "{{ site.Params.localBusiness.telephone }}",
+  "email": "{{ site.Params.localBusiness.email }}",
+  "priceRange": "{{ site.Params.localBusiness.priceRange }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.Params.localBusiness.streetAddress }}",
+    "addressLocality": "{{ site.Params.localBusiness.addressLocality }}",
+    "addressRegion": "{{ site.Params.localBusiness.addressRegion }}",
+    "postalCode": "{{ site.Params.localBusiness.postalCode }}",
+    "addressCountry": "{{ site.Params.localBusiness.addressCountry }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": {{ site.Params.localBusiness.latitude }},
+    "longitude": {{ site.Params.localBusiness.longitude }}
+  },
+  "areaServed": [
+    {{ range $index, $area := site.Params.localBusiness.areaServed }}
+      {{ if $index }}, {{ end }}"{{ $area }}"
+    {{ end }}
+  ],
+  "description": "{{ with $p.Description }}{{ . | plainify }}{{ else }}{{ site.Params.description }}{{ end }}"
+}
+</script>
