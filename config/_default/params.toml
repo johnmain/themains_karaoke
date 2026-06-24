@@ -11,6 +11,7 @@ autoSwitchAppearance = false
 
 defaultThemeColor = "#FFFFFF"
 
+title = "DJ & Karaoke Services | Maintec Entertainment | Ethelbert & Parkland, MB"
 description = "Professional DJ & MC services for weddings, community socials, graduation dances, and karaoke nights in Ethelbert and across Manitoba. We bring the club experience to every event with premium sound, lighting, and entertainment that keeps the dance floor packed all night long!"
 
 favicon = "favicon.png"
@@ -22,7 +23,7 @@ favicon = "favicon.png"
   showSocial = true
 
 [seo]
-  keywords = ["Parkland Area", "Dauphin Manitoba", "Ethelbert Manitoba"]
+  keywords = ["Manitoba wedding DJ", "Ethelbert karaoke", "Parkland Region DJ", "Dauphin event entertainment", "community social DJ Manitoba", "graduation dance DJ", "Karaoke with John"]
 
 [footer]
   showSocial = true

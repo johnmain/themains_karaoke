@@ -1,6 +1,7 @@
 baseURL = 'https://entertainment.themains.org/'
-languageCode = 'en-us'
-title = 'Maintec Entertainment - Premium DJ Services in Manitoba'
+locale = 'en-us'
+title = 'DJ & Karaoke Services in Ethelbert & Parkland, MB | Maintec Entertainment'
+disableLanguages = ["id"]
 
 [author]
   name = "John Main"

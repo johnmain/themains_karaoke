@@ -1,9 +1,9 @@
-languageCode = "en"
-languageName = "English"
-languageDirection = "ltr"
+locale = "en"
+label = "English"
+direction = "ltr"
 weight = 1
 
-title = "Maintec Entertainment"
+title = "DJ & Karaoke Services in Ethelbert & Parkland, MB | Maintec Entertainment"
 copyright = "[John Main Designs ©](mailto:info@themains2.org)"
 
 [params]

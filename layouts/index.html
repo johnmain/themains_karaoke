@@ -1,37 +1,4 @@
 {{ define "main" }}
-<!-- LocalBusiness JSON-LD Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EntertainmentBusiness",
-  "name": "{{ site.Params.localBusiness.name }}",
-  "image": "{{ absURL site.Params.header.logo }}",
-  "@id": "{{ site.BaseURL }}",
-  "url": "{{ site.BaseURL }}",
-  "telephone": "{{ site.Params.localBusiness.telephone }}",
-  "email": "{{ site.Params.localBusiness.email }}",
-  "priceRange": "{{ site.Params.localBusiness.priceRange }}",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "{{ site.Params.localBusiness.streetAddress }}",
-    "addressLocality": "{{ site.Params.localBusiness.addressLocality }}",
-    "addressRegion": "{{ site.Params.localBusiness.addressRegion }}",
-    "postalCode": "{{ site.Params.localBusiness.postalCode }}",
-    "addressCountry": "{{ site.Params.localBusiness.addressCountry }}"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": {{ site.Params.localBusiness.latitude }},
-    "longitude": {{ site.Params.localBusiness.longitude }}
-  },
-  "areaServed": [
-    {{ range $index, $area := site.Params.localBusiness.areaServed }}
-      {{ if $index }}, {{ end }}"{{ $area }}"
-    {{ end }}
-  ],
-  "description": "{{ site.Params.description }}"
-}
-</script>
 <div class="container mx-auto px-4 py-12">
     
     <!-- Hero Section -->
@@ -51,7 +18,7 @@
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/wedding.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Weddings" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Wedding DJ setup at a community hall in Dauphin, MB for an elegant reception by Maintec Entertainment" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Weddings</h2>
@@ -70,7 +37,7 @@
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/social.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Community Socials" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="High-energy community social DJ setup at a local arena and community center in Ethelbert, Parkland Region, Manitoba" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Community Socials</h2>
@@ -89,7 +56,7 @@
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/graduation.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Graduation Dances" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Graduation dance DJ with professional sound and lighting at a high school gymnasium in Brandon, MB" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Graduation Dances</h2>
@@ -108,7 +75,7 @@
                 <div class="service-card h-full border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 flex flex-col overflow-hidden">
                     {{ with resources.Get "images/karaoke.png" }}
                     {{ $image := .Resize "800x webp q80" }}
-                    <img src="{{ $image.RelPermalink }}" alt="Karaoke Nights" class="w-full h-48 md:h-64 object-cover">
+                    <img src="{{ $image.RelPermalink }}" alt="Professional karaoke setup with wireless microphones at the Ethelbert Curling Club lounge in Ethelbert, MB" class="w-full h-48 md:h-64 object-cover">
                     {{ end }}
                     <div class="p-8 flex flex-col justify-center text-center flex-1">
                         <h2 class="card-title text-3xl font-bold mb-4">Karaoke Nights 🎤</h2>
