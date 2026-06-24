@@ -25,7 +25,7 @@ In the spring of 2024, John relocated to Manitoba and quickly resumed hosting po
 
 - **Premium Sound Equipment:** High-fidelity audio systems that deliver crystal-clear sound for everything from intimate ceremonies to packed community halls.
 - **Expert Music Curation:** Deep knowledge of Classic Rock, 80s, Hard Rock, Metal, and Country — genres that keep Manitoba dance floors packed all night long.
-- **Community Connection:** Born and raised in rural Manitoba, John understands the unique traditions of Ukrainian Canadian socials, polka nights, and local fundraisers.
+- **Community Connection:** Born and raised in rural Ontario, John feels right at home in small-town Manitoba and deeply understands the unique traditions of Ukrainian Canadian socials, polka nights, and local fundraisers.
 - **Professional MC Services:** Every event gets a dedicated MC who reads the room, manages the schedule, and keeps energy high from start to finish.
 - **Extensive Karaoke Library:** Thousands of songs spanning every genre, from country classics to current pop hits.
 
@@ -36,7 +36,7 @@ While based in Ethelbert, Maintec Entertainment proudly serves the entire **Park
 - **Ethelbert** and surrounding rural communities
 - **Dauphin** and the Parkland Region
 - **Brandon** and surrounding areas
-- **Miniota, Rosser, Tryon, Carberry, and rural Manitoba communities**
+- **Miniota, Rosser, Treherne, Carberry, and rural Manitoba communities**
 
 No matter where your event is, we bring the club experience to you with reliable, professional service that makes your event unforgettable. For premium **Parkland Event Services** or an experienced **Manitoba Wedding DJ**, John is your local expert.
 
