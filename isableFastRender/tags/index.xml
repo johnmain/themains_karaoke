@@ -65,31 +65,17 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Canada Day</title>
-				<link>http://localhost:1313/tags/canada-day/</link>
-				<pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/canada-day/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>Curling Rink</title>
 				<link>http://localhost:1313/tags/curling-rink/</link>
-				<pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/tags/curling-rink/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Karaoke</title>
 				<link>http://localhost:1313/tags/karaoke/</link>
-				<pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+				<pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/tags/karaoke/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Live Music</title>
-				<link>http://localhost:1313/tags/live-music/</link>
-				<pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/live-music/</guid>
 				<description></description>
 			</item>
 	</channel>
