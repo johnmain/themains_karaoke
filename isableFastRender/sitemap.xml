@@ -74,12 +74,16 @@
     
   
     
+  
+    
       <url>
             <loc>http://localhost:1313/contact/</loc>
           </url>
     
   
     
+  
+    
       <url>
             <loc>http://localhost:1313/karaoke/</loc>
           </url>
@@ -89,6 +93,18 @@
       <url>
             <loc>http://localhost:1313/karaoke/</loc>
           </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/services/</loc>
+          </url>
+    
+  
     
   
 </urlset>

@@ -31,4 +31,4 @@ Maintec Entertainment brings premium sound, dynamic lighting, and professional M
 
 *Want us at your next community event, wedding, or social? [Contact John](/contact/) to discuss your event.*
 
-*Follow us on [Facebook](https://www.facebook.com/MaintecEntertainment/) for updates on upcoming gigs across Dauphin, Brandon, and the wider Parkland region!*
+*Follow us on [Facebook](https://www.facebook.com/MaintecEntertainment/) for updates on upcoming gigs across Dauphin and the wider Parkland region!*

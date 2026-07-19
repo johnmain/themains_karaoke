@@ -13,7 +13,7 @@ showPagination: false
 
 ## About DJ John Main
 
-DJ John Main is a professional entertainer based in **Ethelbert, Manitoba**, serving the entire **Parkland Region** including Dauphin, Brandon, and surrounding rural communities. With over a decade of experience in live entertainment, John brings a rare combination of technical expertise, community knowledge, and genuine passion to every event.
+DJ John Main is a professional entertainer based in **Ethelbert, Manitoba**, serving the entire **Parkland Region** including Dauphin and surrounding rural communities. With over a decade of experience in live entertainment, John brings a rare combination of technical expertise, community knowledge, and genuine passion to every event.
 
 ### The Story Behind Maintec Entertainment
 
@@ -35,11 +35,11 @@ While based in Ethelbert, Maintec Entertainment proudly serves the entire **Park
 
 - **Ethelbert** and surrounding rural communities
 - **Dauphin** and the Parkland Region
-- **Brandon** and surrounding areas
-- **Miniota, Rosser, Treherne, Carberry, and rural Manitoba communities**
+- **Surrounding areas**
+- **Rural Manitoba communities**
 
 No matter where your event is, we bring the club experience to you with reliable, professional service that makes your event unforgettable. For premium **Parkland Event Services** or an experienced **Manitoba Wedding DJ**, John is your local expert.
 
 ---
 
-*Want to hear what past clients have to say? [Browse our upcoming events](/events/) or [get in touch](/contact/) to discuss your next celebration.*
+*Want to hear what past clients have to say? [Browse our upcoming events](/events/) or [get in touch](/contact/) to discuss your next celebration. See what we offer on our [Services](/services/) page.*

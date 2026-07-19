@@ -22,4 +22,4 @@ Our safety is the top priority, and we cannot guarantee the venue will be safe o
 *Have questions or want to book us for your own community event, wedding, or social? [Get in touch here](/contact/) to chat about our **Manitoba Wedding DJ** packages or professional **Parkland Event Services** with John directly.*
 
 ---
-*Follow us on social media for updates on upcoming gigs across Dauphin, Brandon, and the wider Parkland region!*
+*Follow us on social media for updates on upcoming gigs across Dauphin and the wider Parkland region!*
