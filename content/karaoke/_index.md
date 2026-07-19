@@ -1,14 +1,14 @@
 ---
-title: "Ethelbert Karaoke Song Library | Maintec Entertainment"
-description: "Browse Maintec Entertainment's extensive Ethelbert Karaoke song library — thousands of songs across country, rock, 80s, metal, and pop. Perfect for local Parkland Event Services."
-keywords: ["Ethelbert Karaoke", "Manitoba Wedding DJ", "Parkland Event Services", "karaoke library", "karaoke songs", "Karaoke with John"]
+title: "Karaoke Song Library | Maintec Entertainment"
+description: "Browse Maintec Entertainment's extensive Karaoke song library — thousands of songs across country, rock, 80s, metal, and pop. Perfect for local Parkland Event Services."
+keywords: ["Karaoke", "Manitoba Wedding DJ", "Parkland Event Services", "karaoke library", "karaoke songs", "Karaoke with John"]
 author: "John Main"
 images: ["/images/karaoke.png"]
 ---
 
 ## Browse Our Karaoke Song Library
 
-Looking for that perfect song? Our **Ethelbert Karaoke** song library (formerly *Karaoke with John*) has something for everyone — from country classics and classic rock anthems to 80s power ballads and current pop hits.
+Looking for that perfect song? Our **Karaoke** song library (formerly *Karaoke with John*) has something for everyone — from country classics and classic rock anthems to 80s power ballads and current pop hits.
 
 Search the library below to find your favourite tracks and add them to your event playlist. We've got thousands of songs spanning every genre:
 
