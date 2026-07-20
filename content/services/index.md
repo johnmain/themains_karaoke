@@ -78,7 +78,6 @@ We serve the entire **Parkland Region**, including:
 
 - **Ethelbert** and surrounding rural communities
 - **Dauphin** and the Parkland Region
-- **Fork River** and other nearby communities
 
 [View Upcoming Events](/events/)
 
