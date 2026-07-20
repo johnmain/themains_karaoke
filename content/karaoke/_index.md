@@ -27,9 +27,9 @@ Search the library below to find your favourite tracks and add them to your even
 
 Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karaoke additions, a private party, or custom **Parkland Event Services** at local community centers, our professional karaoke setup ensures a flawless experience:
 
-- **Wireless microphones** — Multiple mics available for group singing
+- Multiple microphones available for group singing
 - **Large song display** — Clear lyrics on screen for easy singing
-- **Professional sound** — No feedback, no distortion — just crystal-clear karaoke
+- Crystal-clear sound system
 - **Song requests** — We can add songs to the library before your event
 
 **[Contact us](/contact/) today** to book a karaoke night for your event in Ethelbert, Dauphin, or anywhere in the Parkland Region.

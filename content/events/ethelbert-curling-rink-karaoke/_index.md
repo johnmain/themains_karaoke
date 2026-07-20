@@ -19,10 +19,10 @@ We are hosting a **Karaoke night** at the **Ethelbert Curling Rink** on March 20
 
 ### What to Expect
 
-- **🎤 Professional Karaoke Setup** — High-quality wireless microphones and a massive song library with thousands of tracks
+- **🎤 Professional Karaoke Setup** — High-quality microphones and a massive song library with thousands of tracks
 - **🎸 Diverse Song Selection** — From country classics and classic rock anthems to 80s power ballads and current pop hits
 - **👥 Community Fun** — A relaxed, family-friendly atmosphere right here in our local curling rink
-- **💎 Premium Sound** — Crystal-clear audio with no feedback, no distortion — just great karaoke
+- **💎 Premium Sound** — Crystal-clear audio with no distortion — just great karaoke
 
 ### About This Event
 

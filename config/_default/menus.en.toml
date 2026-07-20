@@ -1,7 +1,7 @@
 [[main]]
   identifier = "services"
   name = "Services"
-  url = "/#services"
+  url = "/services/"
   weight = 10
 
 [[main]]

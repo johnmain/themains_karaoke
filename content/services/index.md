@@ -60,11 +60,11 @@ Celebrate your achievements with the latest hits and timeless anthems. We bring 
 
 ## 4. Karaoke Nights — Ethelbert Karaoke
 
-Ready to perform? Our **professional karaoke setup** includes wireless microphones (multiple available), a massive song display system with lyrics, and thousands of songs across every genre — country classics, classic rock, 80s power ballads, and current pop hits.
+Ready to perform? Our **professional karaoke setup** includes microphones (multiple available), a massive song display system with lyrics, and thousands of songs across every genre — country classics, classic rock, 80s power ballads, and current pop hits.
 
 ### Our Karaoke Highlights
 - **Extensive Song Library** — Thousands of songs spanning Classic Rock, 80s, Hard Rock, Metal, Country, and Pop
-- **Professional Equipment** — Wireless microphones, large display screen, crystal-clear sound
+- **Professional Equipment** — Multiple microphones, large display screen, crystal-clear sound
 - **Custom Requests** — We can add songs to the library before your event
 - **Public & Private Events** — Host a karaoke night at a community hall or book it for your own private party
 
