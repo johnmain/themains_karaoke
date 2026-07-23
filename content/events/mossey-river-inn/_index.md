@@ -35,4 +35,4 @@ This is a great night to unwind and have some fun at the Mossey River Inn. Bring
 
 ---
 
-*Want to book a professional **Manitoba Wedding DJ** or high-energy **Ethelbert Karaoke** for your own event? [Contact DJ John Main](/contact/) to discuss premium **Parkland Event Services** for your next celebration in Ethelbert, Dauphin, or anywhere in Western Manitoba.*
+*Want to book a professional **Manitoba Wedding DJ** or high-energy **Karaoke** for your own event? [Contact DJ John Main](/contact/) to discuss premium **Parkland Event Services** for your next celebration in Ethelbert, Dauphin, or anywhere in Western Manitoba.*
