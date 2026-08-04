@@ -65,7 +65,7 @@ async function checkOpenKJStatus() {
 
     const data = await response.json();
 
-    if (data && (data.accepts_requests == 1 || data.requests_enabled == true)) {
+   if (data && (data.active === 1 || data.active === true || data.active === "1")) {
       openkjContainer.style.display = 'block';
       searchContainer.style.display = 'none';
     } else {
