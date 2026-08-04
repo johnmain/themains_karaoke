@@ -22,7 +22,9 @@ Search the library below to find your favourite tracks and add them to your even
 ---
 <!-- Songbook Search Partial (Shown by default) -->
 <div id="search-container">
+
 {{< search "karaoke" >}}
+
 </div>
 
 <div id="openkj-container" style="display: none;">
