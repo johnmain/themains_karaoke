@@ -5,5 +5,10 @@ enableRobotsTXT = true
 pagination.pagerSize = 5
 summaryLength = 0
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
