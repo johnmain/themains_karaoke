@@ -25,7 +25,7 @@ Search the library below to find your favourite tracks and add them to your even
 
 ## Karaoke Night Song submission 
 <iframe 
-  src="https://https://requests.eu1.netbird.services" 
+  src="https://requests.eu1.netbird.services" 
   style="width: 100%; height: 650px; border: none; border-radius: 8px;"
   allow="geolocation">
 </iframe>
