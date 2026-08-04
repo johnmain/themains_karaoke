@@ -21,6 +21,8 @@ Search the library below to find your favourite tracks and add them to your even
 
 {{< search "karaoke" >}}
 
+---
+
 ## Karaoke Night Song submission 
 <iframe 
   src="https://https://requests.eu1.netbird.services" 
