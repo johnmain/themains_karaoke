@@ -30,7 +30,7 @@ Search the library below to find your favourite tracks and add them to your even
 <div id="openkj-container" style="display: none;">
   <iframe 
     src="https://requests.eu1.netbird.services" 
-    style="width: 100%; height: 650px; border: none; border-radius: 8px;"
+    style="width: 100%; height: 350px; border: none; overflow-y: auto;"
     allow="geolocation">
   </iframe>
 </div>
