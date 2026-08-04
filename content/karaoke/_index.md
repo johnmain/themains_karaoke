@@ -27,7 +27,6 @@ Search the library below to find your favourite tracks and add them to your even
 
 </div>
 
-## Karaoke Night Song submission 
 <iframe 
   src="https://requests.eu1.netbird.services" 
   style="width: 100%; height: 650px; border: none; border-radius: 8px;"
@@ -51,7 +50,7 @@ Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karao
 async function checkOpenKJStatus() {
   const openkjContainer = document.getElementById('openkj-container');
   const searchContainer = document.getElementById('search-container');
-  const statusEndpoint = 'http://192.168.88.18:8085/api.php';
+  const statusEndpoint = 'https://requests.eu1.netbird.services/status.php';
 
   try {
     const response = await fetch(statusEndpoint, {
