@@ -19,9 +19,13 @@ Search the library below to find your favourite tracks and add them to your even
 - **🎤 Modern Pop** — The latest chart-toppers and crowd favourites
 - **🇨🇦 Canadian Classics** — The Tragically Hip, Neil Young, Leonard Cohen, and more
 
+---
+<!-- Songbook Search Partial (Shown by default) -->
+<div id="search-container">
+
 {{< search "karaoke" >}}
 
----
+</div>
 
 ## Karaoke Night Song submission 
 <iframe 
@@ -42,3 +46,37 @@ Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karao
 - **Song requests** — We can add songs to the library before your event
 
 **[Contact us](/contact/) today** to book a karaoke night for your event in Ethelbert, Dauphin, or anywhere in the Parkland Region.
+
+<script>
+async function checkOpenKJStatus() {
+  const openkjContainer = document.getElementById('openkj-container');
+  const searchContainer = document.getElementById('search-container');
+  const statusEndpoint = 'http://192.168.88.18:8085/api.php';
+
+  try {
+    const response = await fetch(statusEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ action: 'get_venue_status' })
+    });
+
+    if (!response.ok) throw new Error('Server unreachable');
+
+    const data = await response.json();
+
+    if (data && (data.accepts_requests == 1 || data.requests_enabled == true)) {
+      openkjContainer.style.display = 'block';
+      searchContainer.style.display = 'none';
+    } else {
+      openkjContainer.style.display = 'none';
+      searchContainer.style.display = 'block';
+    }
+  } catch (err) {
+    // If OpenKJ is offline or requests are disabled, default to the search partial
+    openkjContainer.style.display = 'none';
+    searchContainer.style.display = 'block';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', checkOpenKJStatus);
+</script>
