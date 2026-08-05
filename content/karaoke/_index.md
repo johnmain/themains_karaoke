@@ -22,12 +22,20 @@ Search the library below to find your favourite tracks and add them to your even
 ---
 <!-- Songbook Search Partial (Shown by default) -->
 <div id="search-container">
-
+<h2>Offline Song Search</h2>
 {{< search "karaoke" >}}
 
 </div>
 
 <div id="openkj-container" style="display: none;">
+<h2>Request Your Songs Live</h2>
+
+Skip the paper request slips! Use our real-time request portal to search our song catalog and submit your choices directly from your phone. Your selections go straight into our digital queue.
+
+* **Fast Search:** Find your favorite tracks instantly.
+* **Instant Queueing:** Send requests directly to the DJ booth.
+* **No Waiting:** Keep track of your turn without leaving your table.
+
   <iframe 
     src="https://requests.eu1.netbird.services" 
     style="width: 100%; height: 350px; border: none; overflow-y: auto;"
