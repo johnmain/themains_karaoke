@@ -36,11 +36,8 @@ Skip the paper request slips! Use our real-time request portal to search our son
 * **Instant Queueing:** Send requests directly to the DJ booth.
 * **No Waiting:** Keep track of your turn without leaving your table.
 
-<iframe 
-  src="https://requests.eu1.netbird.services" 
-  style="width: 100%; height: 350px; border: none; overflow-y: auto;"
-  allow="geolocation">
-</iframe>
+<!-- Button injected here dynamically when live -->
+
 </div>
 
 ---
@@ -56,11 +53,33 @@ Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karao
 
 **[Contact us](/contact/) today** to book a karaoke night for your event in Ethelbert, Dauphin, or anywhere in the Parkland Region.
 
+<style>
+/* Pop-out button styling matching Tailwind button theme */
+#btn-open-new-window {
+  display: inline-block !important;
+  margin-top: 8px !important;
+  margin-bottom: 16px !important;
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  padding: 0.65rem 1.25rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  transition: background-color 0.15s ease-in-out !important;
+}
+
+#btn-open-new-window:hover {
+  background-color: #1d4ed8 !important;
+}
+</style>
+
 <script>
 async function checkOpenKJStatus() {
   const openkjContainer = document.getElementById('openkj-container');
   const searchContainer = document.getElementById('search-container');
   const statusEndpoint = 'https://requests.eu1.netbird.services/status.php';
+  const openkjUrl = 'https://requests.eu1.netbird.services/index.php';
 
   try {
     const response = await fetch(statusEndpoint, {
@@ -73,9 +92,23 @@ async function checkOpenKJStatus() {
 
     const data = await response.json();
 
-   if (data && (data.active === 1 || data.active === true || data.active === "1")) {
+    if (data && (data.active === 1 || data.active === true || data.active === "1")) {
       openkjContainer.style.display = 'block';
       searchContainer.style.display = 'none';
+
+      // Inject the pop-out button above the iframe if it doesn't already exist
+      if (!document.getElementById('btn-open-new-window')) {
+        const popoutBtn = document.createElement('a');
+        popoutBtn.id = 'btn-open-new-window';
+        popoutBtn.href = openkjUrl;
+        popoutBtn.target = '_blank';
+        popoutBtn.rel = 'noopener noreferrer';
+        popoutBtn.className = 'button';
+        popoutBtn.innerHTML = 'Open Search in New Window ↗';
+
+        const iframe = openkjContainer.querySelector('iframe');
+        openkjContainer.insertBefore(popoutBtn, iframe);
+      }
     } else {
       openkjContainer.style.display = 'none';
       searchContainer.style.display = 'block';
