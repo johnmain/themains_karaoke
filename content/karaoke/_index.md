@@ -102,5 +102,5 @@ async function checkRequestStatus() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', checkOpenKJStatus);
+document.addEventListener('DOMContentLoaded', checkRequestStatus);
 </script>
