@@ -90,7 +90,18 @@ async function checkRequestStatus() {
     if (data.accepting) {
       request.style.display = 'block';
       search.style.display = 'none';
-      // ...show the "Open Song Requests" button linking to PORTAL + '/songs'
+      // Inject the pop-out button if it doesn't already exist
+      if (!document.getElementById('btn-open-new-window')) {
+        const popoutBtn = document.createElement('a');
+        popoutBtn.id = 'btn-open-new-window';
+        popoutBtn.href = PORTAL + '/';
+        popoutBtn.target = '_blank';
+        popoutBtn.rel = 'noopener noreferrer';
+        popoutBtn.className = 'button';
+        popoutBtn.innerHTML = 'Open Request Portal in New Window ↗';
+
+        // Append it inside the openkj container
+        request.appendChild(popoutBtn);
     } else {
       request.style.display = 'none';
       search.style.display = 'block';
