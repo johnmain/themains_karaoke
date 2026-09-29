@@ -82,14 +82,15 @@ async function checkRequestStatus() {
   const request = document.getElementById('openkj-container');
 
   try {
-    // GET only — no method, no headers, no body
+    // GET request to your Netbird API status endpoint
     const res = await fetch(PORTAL + '/api/status', { cache: 'no-store' });
     if (!res.ok) throw new Error('status ' + res.status);
-    const data = await res.json();          // { accepting: true|false, ... }
+    const data = await res.json();          // expects { accepting: true|false, ... }
 
     if (data.accepting) {
       request.style.display = 'block';
       search.style.display = 'none';
+
       // Inject the pop-out button if it doesn't already exist
       if (!document.getElementById('btn-open-new-window')) {
         const popoutBtn = document.createElement('a');
@@ -102,6 +103,7 @@ async function checkRequestStatus() {
 
         // Append it inside the openkj container
         request.appendChild(popoutBtn);
+      }
     } else {
       request.style.display = 'none';
       search.style.display = 'block';
