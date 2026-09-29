@@ -75,48 +75,30 @@ Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karao
 </style>
 
 <script>
-async function checkOpenKJStatus() {
-  const openkjContainer = document.getElementById('openkj-container');
-  const searchContainer = document.getElementById('search-container');
-  const statusEndpoint = 'https://requests.eu1.netbird.services/api/status';
-  const openkjUrl = 'https://requests.eu1.netbird.services/index.php';
+async function checkRequestStatus() {
+  const PORTAL = 'https://requests.eu1.netbird.services';
+
+  const search = document.getElementById('search-container');
+  const request = document.getElementById('openkj-container');
 
   try {
-    const response = await fetch(statusEndpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ action: 'get_venue_status' })
-    });
+    // GET only — no method, no headers, no body
+    const res = await fetch(PORTAL + '/api/status', { cache: 'no-store' });
+    if (!res.ok) throw new Error('status ' + res.status);
+    const data = await res.json();          // { accepting: true|false, ... }
 
-    if (!response.ok) throw new Error('Server unreachable');
-
-    const data = await response.json();
-
-    if (data && (data.active === 1 || data.active === true || data.active === "1")) {
-      openkjContainer.style.display = 'block';
-      searchContainer.style.display = 'none';
-
-      // Inject the pop-out button above the iframe if it doesn't already exist
-      if (!document.getElementById('btn-open-new-window')) {
-        const popoutBtn = document.createElement('a');
-        popoutBtn.id = 'btn-open-new-window';
-        popoutBtn.href = openkjUrl;
-        popoutBtn.target = '_blank';
-        popoutBtn.rel = 'noopener noreferrer';
-        popoutBtn.className = 'button';
-        popoutBtn.innerHTML = 'Open Search in New Window ↗';
-
-        const iframe = openkjContainer.querySelector('iframe');
-        openkjContainer.insertBefore(popoutBtn, iframe);
-      }
+    if (data.accepting) {
+      request.style.display = 'block';
+      search.style.display = 'none';
+      // ...show the "Open Song Requests" button linking to PORTAL + '/songs'
     } else {
-      openkjContainer.style.display = 'none';
-      searchContainer.style.display = 'block';
+      request.style.display = 'none';
+      search.style.display = 'block';
     }
   } catch (err) {
-    // If OpenKJ is offline or requests are disabled, default to the search partial
-    openkjContainer.style.display = 'none';
-    searchContainer.style.display = 'block';
+    // Portal unreachable or not accepting → fall back to the offline search
+    request.style.display = 'none';
+    search.style.display = 'block';
   }
 }
 
