@@ -74,7 +74,7 @@ Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karao
 }
 </style>
 
-<<script>
+<script>
 async function checkOpenKJStatus() {
   const openkjContainer = document.getElementById('openkj-container');
   const searchContainer = document.getElementById('search-container');
