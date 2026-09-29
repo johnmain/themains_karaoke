@@ -74,11 +74,11 @@ Whether you are planning a wedding and need a **Manitoba Wedding DJ** with karao
 }
 </style>
 
-<script>
+<<script>
 async function checkOpenKJStatus() {
   const openkjContainer = document.getElementById('openkj-container');
   const searchContainer = document.getElementById('search-container');
-  const statusEndpoint = 'https://requests.eu1.netbird.services/status.php';
+  const statusEndpoint = 'https://requests.eu1.netbird.services/api/status';
   const openkjUrl = 'https://requests.eu1.netbird.services/index.php';
 
   try {
